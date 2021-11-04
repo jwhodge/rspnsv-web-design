@@ -1,0 +1,127 @@
+/* Imports */
+/* @import url(typewriter.css);
+@import url(hide-unhide.css); */
+/* Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap");
+/* SCSS Colour Variables for main palate */
+/* Other Variables */
+/* CSS Custom Properties for Light & Dark Themes*/
+:root {
+  /* Light Mode */
+  --lm-bkg-main: #fcf7f8;
+  --lm-bkg-secondary: #7140bf;
+  --lm-text: #121212;
+  --lm-shade: #8947c2;
+  --lm-highlight-main-bkg: #7140bf;
+  --lm-highlight-secondary-bkg: #eee83c;
+  --lm-links: #7140bf;
+  --lm-overlay-5: rgba(0, 0, 0, 0.05);
+  --lm-animation-overlay: transparent;
+  --lm-hero-text: #7140bf;
+  /* Dark Mode */
+  --dm-bkg-main: #121212;
+  --dm-bkg-secondary: #7140bf;
+  --dm-text: #fcf7f8;
+  --dm-shade: #8947c2;
+  --dm-highlight-main-bkg: #eee83c;
+  --dm-highlight-secondary-bkg: #eee83c;
+  --dm-links: #fcf7f8;
+  --dm-overlay-5: rgba(255, 255, 255, 0.05);
+  --dm-animation-overlay: rgba(255, 255, 255, 0.05);
+  --dm-hero-text: #fcf7f8;
+  /* Default Mode */
+  --bkg-main: var(--lm-bkg-main);
+  --bkg-secondary: var(--lm-bkg-secondary);
+  --text: var(--lm-text);
+  --shade: var(--lm-shade);
+  --highlight-main-bkg: var(--lm-highlight-main-bkg);
+  --highlight-secondary-bkg: var(--lm-highlight-secondary-bkg);
+  --links: var(--lm-links);
+  --overlay-5: var(--lm-overlay-5);
+  --anim-overlay: var(--lm-animation-overlay);
+  --hero-text: var(--lm-hero-text);
+}
+
+/* Switched mode */
+body.dark {
+  --bkg-main: var(--dm-bkg-main);
+  --bkg-secondary: var(--dm-bkg-secondary);
+  --text: var(--dm-text);
+  --shade: var(--dm-shade);
+  --highlight-main-bkg: var(--dm-highlight-main-bkg);
+  --highlight-secondary-bkg: var(--dm-highlight-secondary-bkg);
+  --links: var(--dm-links);
+  --overlay-5: var(--dm-overlay-5);
+  --anim-overlay: var(--dm-animation-overlay);
+  --hero-text: var(--dm-hero-text);
+}
+
+/* Background Colours */
+.main-bkg {
+  background-color: var(--bkg-main);
+}
+
+.secondary-bkg {
+  background-color: var(--bkg-secondary);
+}
+
+.shade-bkg {
+  background-color: var(--shade);
+}
+
+.overlay-5 {
+  background-color: var(--overlay-5);
+}
+
+.anim-overlay {
+  background-color: var(--anim-overlay);
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Body sizing */
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--text);
+  background-color: var(--bkg-main);
+}
+
+/* Icons */
+.fa,
+.fas {
+  color: var(--highlight-main-bkg);
+}
+
+/*# sourceMappingURL=index.css.map */

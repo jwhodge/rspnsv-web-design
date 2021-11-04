@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "RSPNSV Web Design",
   },
-  plugins: [],
+  plugins: ["gatsby-plugin-dark-mode"],
 };
