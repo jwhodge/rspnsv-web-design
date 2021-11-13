@@ -13,7 +13,10 @@ import {
 const IndexPage = () => {
   return (
     <Layout>
-      <ContentSection style="header-offset main-bkg" innerStyle="anim-overlay">
+      <ContentSection
+        style="header-offset main-bkg"
+        innerStyle="vert-ctr anim-overlay"
+      >
         <Animation />
       </ContentSection>
       <ContentSection style="secondary-bkg">
