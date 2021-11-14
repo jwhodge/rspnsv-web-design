@@ -3,7 +3,7 @@ import ContentBox from "../components/content-box";
 import ContentSection from "../components/content-section";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const About = ({ data }) => {
