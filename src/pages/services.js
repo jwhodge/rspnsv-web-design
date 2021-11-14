@@ -132,9 +132,9 @@ const Services = ({ data }) => {
   );
 };
 
-export const pageQuery = graphql`
-  query Services {
-    mdx(id: { eq: "681e4a7c-b8eb-50b2-89e3-370cd6ea2380" }) {
+export const query = graphql`
+  query ServicesQuery {
+    mdx(slug: { eq: "service-text" }) {
       frontmatter {
         title
         date

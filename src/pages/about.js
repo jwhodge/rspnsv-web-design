@@ -28,7 +28,7 @@ const About = ({ data }) => {
 };
 
 export const query = graphql`
-  query About {
+  query AboutQuery {
     mdx(id: { eq: "2beceed8-2cfe-5ec1-8d91-06132a10e271" }) {
       frontmatter {
         title
