@@ -3,10 +3,9 @@ import ContentBox from "../components/content-box";
 import ContentSection from "../components/content-section";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import AboutText from "/content/about-text.mdx";
 
-const About = ({ data }) => {
+const About = () => {
   return (
     <Layout>
       <ContentSection style="main-bkg header-offset" innerStyle="">
@@ -18,26 +17,11 @@ const About = ({ data }) => {
           />
         </ContentBox>
         <ContentBox style="two-thirds main-bkg left">
-          <h1>{data.mdx.frontmatter.title}</h1>
-          <p>{data.mdx.frontmatter.date}</p>
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          <AboutText />
         </ContentBox>
       </ContentSection>
     </Layout>
   );
 };
-
-export const query = graphql`
-  query AboutQuery {
-    mdx(slug: { eq: "about-text" }) {
-      frontmatter {
-        title
-        date
-      }
-      body
-      slug
-    }
-  }
-`;
 
 export default About;

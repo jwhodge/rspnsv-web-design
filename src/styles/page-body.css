@@ -143,8 +143,12 @@ button {
   color: var(--highlight-main-bkg);
 }
 
-.custom-indent {
+ul {
   padding-left: 30px;
+}
+
+.no-indent {
+  padding-left: 0;
 }
 
 /* Background Colours */

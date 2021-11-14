@@ -3,8 +3,13 @@ import Layout from "../components/layout";
 import ContentSection from "../components/content-section";
 import ContentBox from "../components/content-box";
 import Animation from "../components/animation";
+import HPSite from "/content/home-page-site.mdx";
+import HPDesign from "/content/home-page-designer.mdx";
+import HPTech from "/content/home-page-technical.mdx";
+import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faCaretDown,
   faMobileAlt,
   faMoneyBillAlt,
   faUniversalAccess,
@@ -18,28 +23,56 @@ const IndexPage = () => {
         innerStyle="vert-ctr anim-overlay"
       >
         <Animation />
+        <FontAwesomeIcon
+          icon={faCaretDown}
+          className="fa"
+          id="down-arrow"
+          size="3x"
+        />
       </ContentSection>
-      <ContentSection style="secondary-bkg">
-        <ContentBox style="main-bkg third">
-          <h3>Responsive</h3>
-          <FontAwesomeIcon icon={faMobileAlt} className="fa" size="3x" />
-          <p>
-            A design that works well on every screen from mobile to desktop.
-          </p>
+      <ContentSection style="secondary-bkg" innerStyle="">
+        <ContentBox style="two-thirds left">
+          <HPSite />
+          <div className="btn">
+            <button className="sec-btn">Contact Us Now</button>
+          </div>
         </ContentBox>
-        <ContentBox style="main-bkg third">
-          <h3>Accessible</h3>
-          <FontAwesomeIcon icon={faUniversalAccess} className="fa" size="3x" />
-          <p>Ensuring all customers are able to access your message easily.</p>
+        <ContentBox style="third image-only">
+          <StaticImage
+            imgStyle={{ borderRadius: "5px" }}
+            alt="multi-coloured image of computer code"
+            src="../images/dense-code-image.jpg"
+          />
         </ContentBox>
-        <ContentBox style="main-bkg third">
-          <h3>Tailored</h3>
-          <i class="fas fa-money-bill-alt fa-3x"></i>
-          <FontAwesomeIcon icon={faMoneyBillAlt} className="fa" size="3x" />
-          <p>
-            We'll build a solution to fit your requirements, on time and on
-            budget.
-          </p>
+      </ContentSection>
+      <ContentSection style="main-bkg" innerStyle="">
+        <ContentBox style="third image-only">
+          <StaticImage
+            imgStyle={{ borderRadius: "5px" }}
+            alt="multi-coloured image of computer code"
+            src="../images/dense-code-image.jpg"
+          />
+        </ContentBox>
+        <ContentBox style="two-thirds left">
+          <HPDesign />
+          <div className="btn">
+            <button className="sec-btn">Learn About Site Types</button>
+          </div>
+        </ContentBox>
+      </ContentSection>
+      <ContentSection style="secondary-bkg" innerStyle="">
+        <ContentBox style="two-thirds left">
+          <HPTech />
+          <div className="btn">
+            <button className="sec-btn">Get A Quote Now</button>
+          </div>
+        </ContentBox>
+        <ContentBox style="third image-only">
+          <StaticImage
+            imgStyle={{ borderRadius: "5px" }}
+            alt="multi-coloured image of computer code"
+            src="../images/dense-code-image.jpg"
+          />
         </ContentBox>
       </ContentSection>
     </Layout>

@@ -30,7 +30,7 @@ const Header = () => {
               )}
             </ThemeToggler>
           </div>
-          <ul>
+          <ul className="no-indent">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/services">Services</Link>
