@@ -8,12 +8,7 @@ import HPDesign from "/content/home-page-designer.mdx";
 import HPTech from "/content/home-page-technical.mdx";
 import { StaticImage } from "gatsby-plugin-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCaretDown,
-  faMobileAlt,
-  faMoneyBillAlt,
-  faUniversalAccess,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const IndexPage = () => {
   return (
@@ -25,8 +20,7 @@ const IndexPage = () => {
         <Animation />
         <FontAwesomeIcon
           icon={faCaretDown}
-          className="fa"
-          id="down-arrow"
+          className="fa down-arrow"
           size="3x"
         />
       </ContentSection>
@@ -40,17 +34,22 @@ const IndexPage = () => {
         <ContentBox style="third image-only">
           <StaticImage
             imgStyle={{ borderRadius: "5px" }}
-            alt="multi-coloured image of computer code"
-            src="../images/dense-code-image.jpg"
+            alt="many people in a cafe on their laptops"
+            src="../images/busy-cafe-laptops.jpg"
           />
         </ContentBox>
+        <FontAwesomeIcon
+          icon={faCaretDown}
+          className="fa-alt down-arrow"
+          size="3x"
+        />
       </ContentSection>
       <ContentSection style="main-bkg" innerStyle="">
         <ContentBox style="third image-only">
           <StaticImage
             imgStyle={{ borderRadius: "5px" }}
-            alt="multi-coloured image of computer code"
-            src="../images/dense-code-image.jpg"
+            alt="a sketch of a website outline on a tablet"
+            src="../images/tablet-site-sketch.jpg"
           />
         </ContentBox>
         <ContentBox style="two-thirds left">
@@ -59,6 +58,11 @@ const IndexPage = () => {
             <button className="sec-btn">Learn About Site Types</button>
           </div>
         </ContentBox>
+        <FontAwesomeIcon
+          icon={faCaretDown}
+          className="fa down-arrow"
+          size="3x"
+        />
       </ContentSection>
       <ContentSection style="secondary-bkg" innerStyle="">
         <ContentBox style="two-thirds left">
@@ -70,8 +74,8 @@ const IndexPage = () => {
         <ContentBox style="third image-only">
           <StaticImage
             imgStyle={{ borderRadius: "5px" }}
-            alt="multi-coloured image of computer code"
-            src="../images/dense-code-image.jpg"
+            alt="a person using a smartphone with a laptop in the background"
+            src="../images/phone-with-laptop.jpg"
           />
         </ContentBox>
       </ContentSection>
