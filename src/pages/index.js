@@ -7,8 +7,6 @@ import HPSite from "/content/home-page-site.mdx";
 import HPDesign from "/content/home-page-designer.mdx";
 import HPTech from "/content/home-page-technical.mdx";
 import { StaticImage } from "gatsby-plugin-image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const IndexPage = () => {
   return (
@@ -18,11 +16,6 @@ const IndexPage = () => {
         innerStyle="vert-ctr anim-overlay"
       >
         <Animation />
-        <FontAwesomeIcon
-          icon={faCaretDown}
-          className="fa down-arrow"
-          size="3x"
-        />
       </ContentSection>
       <ContentSection style="secondary-bkg" innerStyle="">
         <ContentBox style="two-thirds left">
@@ -38,11 +31,6 @@ const IndexPage = () => {
             src="../images/busy-cafe-laptops.jpg"
           />
         </ContentBox>
-        <FontAwesomeIcon
-          icon={faCaretDown}
-          className="fa-alt down-arrow"
-          size="3x"
-        />
       </ContentSection>
       <ContentSection style="main-bkg" innerStyle="">
         <ContentBox style="third image-only">
@@ -58,11 +46,6 @@ const IndexPage = () => {
             <button className="sec-btn">Learn About Site Types</button>
           </div>
         </ContentBox>
-        <FontAwesomeIcon
-          icon={faCaretDown}
-          className="fa down-arrow"
-          size="3x"
-        />
       </ContentSection>
       <ContentSection style="secondary-bkg" innerStyle="">
         <ContentBox style="two-thirds left">
