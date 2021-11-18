@@ -19,6 +19,9 @@
   --lm-overlay-5: rgba(0, 0, 0, 0.05);
   --lm-animation-overlay: transparent;
   --lm-hero-text: #7140bf;
+  --lm-logo-text: #7140bf;
+  --lm-logo-base: #7140bf;
+  --lm-logo-highlight: #eee83c;
   /* Dark Mode */
   --dm-bkg-main: #121212;
   --dm-bkg-secondary: #7140bf;
@@ -30,6 +33,9 @@
   --dm-overlay-5: rgba(255, 255, 255, 0.05);
   --dm-animation-overlay: transparent /* rgba(255, 255, 255, 0.05) */;
   --dm-hero-text: #fcf7f8;
+  --dm-logo-text: #fcf7f8;
+  --dm-logo-base: #7140bf;
+  --dm-logo-highlight: #eee83c;
   /* Default Mode */
   --bkg-main: var(--lm-bkg-main);
   --bkg-secondary: var(--lm-bkg-secondary);
@@ -44,6 +50,9 @@
   --hero-text: var(--lm-hero-text);
   --button-background: var(--lm-highlight-main-bkg);
   --button-text: var(--dm-text);
+  --logo-text: var(--lm-logo-text);
+  --logo-base: var(--lm-logo-base);
+  --logo-highlight: var(--lm-logo-highlight);
 }
 
 /* Switched mode */
@@ -61,6 +70,9 @@ body.dark {
   --hero-text: var(--dm-hero-text);
   --button-background: var(--dm-highlight-main-bkg);
   --button-text: var(--lm-text);
+  --logo-text: var(--dm-logo-text);
+  --logo-base: var(--dm-logo-base);
+  --logo-highlight: var(--dm-logo-highlight);
 }
 
 /* Base reset */

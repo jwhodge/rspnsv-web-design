@@ -3,15 +3,14 @@ import { Link } from "gatsby";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import "/src/styles/header.css";
 import logo from "/src/images/rspnsv-transp-lightbg-v3.webp";
+import Logo from "../components/logo";
 
 const Header = () => {
   return (
     /* Header Bar */
     <header class="main-bkg">
       <div class="header-wrapper">
-        <div class="logo">
-          <img class="logo-image" src={logo} alt="Responsive Web Design Logo" />
-        </div>
+        <Logo />
         <nav class="main-menu">
           <div class="darkmode">
             <ThemeToggler>

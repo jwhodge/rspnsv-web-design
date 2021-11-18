@@ -1,0 +1,87 @@
+/* Logo Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+/* CSS Custom Properties for Light & Dark Themes*/
+:root {
+  /* Scalars Logo */
+  --std-logo-height: 80px;
+  --std-logo-width: calc(var(--std-logo-height) * 3.9);
+  --std-logo-font: calc(var(--std-logo-height) * 0.625);
+  --std-tri-side: calc(var(--std-logo-height) * 0.42);
+  --std-tri-btm: calc(var(--std-logo-height) * 0.7165);
+}
+/* Page Header Logo*/
+.std-logo-wrapper {
+  position: relative;
+  height: var(--std-logo-height);
+  width: var(--std-logo-width);
+}
+
+.animated-text {
+  position: absolute;
+  top: 40%;
+  left: 27.94%;
+}
+
+.company-name {
+  font-family: "Russo One", sans-serif;
+  font-size: var(--std-logo-font);
+  color: var(--logo-text);
+}
+
+.rectangle {
+  position: absolute;
+  background-color: var(--logo-base);
+  width: 68.58%;
+  height: 40%;
+  top: 0px;
+  left: 28.84%;
+}
+
+.inner-square {
+  position: absolute;
+  background-color: var(--logo-highlight);
+  width: 7.48%;
+  height: 50%;
+  top: 25%;
+  left: 3.74%;
+}
+
+.inner-rect {
+  position: absolute;
+  background-color: var(--bkg-main);
+  --inner-rect: calc(var(--std-logo-height) * 0.1);
+  width: calc(var(--inner-rect) * 15);
+  height: var(--inner-rect);
+  top: calc(var(--inner-rect) * 1.5);
+  right: var(--inner-rect);
+}
+
+.square {
+  position: absolute;
+  background-color: var(--logo-base);
+  width: var(--std-logo-height);
+  height: var(--std-logo-height);
+  top: 0px;
+  left: 0px;
+}
+
+.circle {
+  position: absolute;
+  background-color: var(--logo-highlight);
+  width: var(--std-logo-height);
+  height: var(--std-logo-height);
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 2%;
+  left: 2%;
+  border-left: var(--std-tri-side) solid transparent;
+  border-right: var(--std-tri-side) solid transparent;
+  border-bottom: var(--std-tri-btm) solid var(--logo-base);
+}

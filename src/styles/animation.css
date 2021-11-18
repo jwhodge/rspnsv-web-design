@@ -1,102 +1,77 @@
-/* Feature animation */
-.animation-wrapper {
+:root {
+  /* Scalars */
+  --logo-wrap: clamp(350px, 80vw, 1000px);
+  --font-base: calc(var(--logo-wrap) * 0.018);
+  --tri-bottom: calc(var(--logo-wrap) * 0.1433);
+  --tri-side: calc(var(--logo-wrap) * 0.084);
+  --hero-size: calc(var(--font-base) * 4.5);
+  --web-d-size: calc(var(--font-base) * 1.5);
+}
+
+/* Scaling Hero Logo */
+.logo-wrapper {
   position: relative;
-  height: 400px;
-  width: 1000px;
+  width: var(--logo-wrap);
+  aspect-ratio: 10 / 4;
 }
 
-.animated-text {
+.logo-text {
   position: absolute;
-  top: 120px;
-  left: 425px;
+  top: 30%;
+  left: 42.5%;
 }
 
-.square {
+.logo-square {
   position: absolute;
-  background-color: #7140bf;
-  width: 200px;
-  height: 200px;
-  -webkit-animation: square-transform 4s 1 forwards;
+  background-color: var(--logo-base);
+  width: 20%;
+  height: 50%;
+  top: 25%;
+  left: 15%;
   animation: square-transform 4s 1 forwards;
 }
 
-.circle {
+.logo-circle {
   position: absolute;
-  background-color: #eee83c;
-  width: 200px;
-  height: 200px;
+  background-color: var(--logo-highlight);
+  width: 20%;
+  height: 50%;
+  top: 25%;
+  left: 15%;
   border-radius: 50%;
-  -webkit-animation: circle-transform 4s 1 forwards;
   animation: circle-transform 4s 1 forwards;
 }
 
-.triangle {
+.logo-triangle {
   position: absolute;
   width: 0;
   height: 0;
-  border-left: 84px solid transparent;
-  border-right: 84px solid transparent;
-  border-bottom: 143.3px solid #7140bf;
-  -webkit-animation: triangle-transform 4s 1 forwards;
+  border-left: var(--tri-side) solid transparent;
+  border-right: var(--tri-side) solid transparent;
+  border-bottom: var(--tri-bottom) solid var(--logo-base);
   animation: triangle-transform 4s 1 forwards;
 }
 
-.company-name {
+.logo-company-name {
   position: relative;
   font-family: "Russo One", sans-serif;
-  font-size: 4.5rem;
-  color: var(--hero-text);
-  -webkit-animation: headline-reveal 5s 1 forwards;
+  font-size: var(--hero-size);
+  color: var(--logo-text);
   animation: headline-reveal 5s 1 forwards;
 }
 
-.we-are {
+.logo-we-are {
   position: relative;
-  color: transparent;
-  -webkit-animation: weare-reveal 6s 1 forwards;
-  animation: weare-reveal 6s 1 forwards;
+  font-size: var(--font-base);
+  animation: weare-reveal 8s 1 forwards;
 }
 
-.tagline {
+.logo-tagline {
   position: relative;
-  font-size: 1.5rem;
-  -webkit-animation: tagline-reveal 6s 1 forwards;
+  font-size: var(--web-d-size);
   animation: tagline-reveal 6s 1 forwards;
 }
-
-/* Keyframes */
-@-webkit-keyframes square-transform {
-  0% {
-    background-color: transparent;
-    top: 0px;
-    left: 0px;
-  }
-  30% {
-    background-color: #7140bf;
-    top: 100px;
-    left: 150px;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  60% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-    top: 100px;
-    left: 150px;
-  }
-  80% {
-    top: 100px;
-    left: 400px;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  100% {
-    top: 100px;
-    left: 150px;
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
+/* Animation Keyframes */
 @keyframes square-transform {
   0% {
     background-color: transparent;
@@ -104,27 +79,27 @@
     left: 0px;
   }
   30% {
-    background-color: #7140bf;
-    top: 100px;
-    left: 150px;
+    background-color: var(--logo-base);
+    top: 25%;
+    left: 15%;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   60% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-    top: 100px;
-    left: 150px;
+    top: 25%;
+    left: 15%;
   }
   80% {
-    top: 100px;
-    left: 400px;
+    top: 25%;
+    left: 40%;
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
   100% {
-    top: 100px;
-    left: 150px;
+    top: 25%;
+    left: 15%;
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -171,78 +146,45 @@
     background-color: transparent;
   }
   20% {
-    background-color: #7140bf;
+    background-color: var(--lm-logo-base);
     top: 0px;
     left: 0px;
   }
   40% {
-    background-color: #eee83c;
-    top: 100px;
-    left: 400px;
+    background-color: var(--lm-logo-highlight);
+    top: 25%;
+    left: 40%;
   }
   80% {
-    top: 100px;
-    left: 400px;
+    top: 25%;
+    left: 40%;
   }
   100% {
-    top: 100px;
-    left: 150px;
+    top: 25%;
+    left: 15%;
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes triangle-transform {
-  0% {
-    border-bottom: transparent;
-    top: 104px;
-    right: 0px;
-  }
-  40% {
-    border-bottom: #7140bf;
-    top: 104px;
-    right: 0px;
-  }
-  80% {
-    top: 104px;
-    right: 416px;
-  }
-  100% {
-    top: 104px;
-    right: 666px;
   }
 }
 
 @keyframes triangle-transform {
   0% {
     border-bottom: transparent;
-    top: 104px;
+    top: 26%;
     right: 0px;
   }
   40% {
-    border-bottom: #7140bf;
-    top: 104px;
-    right: 0px;
+    border-bottom: var(--logo-base);
+    top: 26%;
+    right: 0;
   }
   80% {
-    top: 104px;
-    right: 416px;
+    top: 26%;
+    right: 41.6%;
   }
   100% {
-    top: 104px;
-    right: 666px;
-  }
-}
-
-@-webkit-keyframes headline-reveal {
-  0% {
-    color: transparent;
-  }
-  80% {
-    color: transparent;
-  }
-  100% {
-    color: var(--hero-text);
+    top: 26%;
+    right: 66.6%;
   }
 }
 
@@ -254,19 +196,7 @@
     color: transparent;
   }
   100% {
-    color: var(--hero-text);
-  }
-}
-
-@-webkit-keyframes tagline-reveal {
-  0% {
-    color: transparent;
-  }
-  80% {
-    color: transparent;
-  }
-  100% {
-    color: var(--text);
+    color: var(--logo-text);
   }
 }
 
@@ -282,35 +212,17 @@
   }
 }
 
-@-webkit-keyframes weare-reveal {
-  0% {
-    color: transparent;
-  }
-  65% {
-    color: transparent;
-  }
-  75% {
-    color: var(--text);
-  }
-  85% {
-    color: var(--text);
-  }
-  100% {
-    color: transparent;
-  }
-}
-
 @keyframes weare-reveal {
   0% {
     color: transparent;
   }
-  65% {
+  48.75% {
     color: transparent;
   }
-  75% {
+  56.25% {
     color: var(--text);
   }
-  85% {
+  63.75% {
     color: var(--text);
   }
   100% {
