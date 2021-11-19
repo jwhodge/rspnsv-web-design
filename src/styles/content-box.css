@@ -22,6 +22,15 @@
   border-radius: 5px;
 }
 
+.img-third {
+  width: 37%;
+}
+
+.align-top {
+  justify-content: flex-start;
+  padding-top: 15px;
+}
+
 .full {
   width: 95%;
 }

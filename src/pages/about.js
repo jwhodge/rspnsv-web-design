@@ -8,8 +8,8 @@ import AboutText from "/content/about-text.mdx";
 const About = () => {
   return (
     <Layout>
-      <ContentSection style="main-bkg header-offset" innerStyle="">
-        <ContentBox style="third main-bkg">
+      <ContentSection style="header-offset double-high" innerStyle="">
+        <ContentBox style="img-third align-top">
           <StaticImage
             imgStyle={{ borderRadius: "5px" }}
             alt="multi-coloured image of computer code"

@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "gatsby";
 import { ThemeToggler } from "gatsby-plugin-dark-mode";
 import "/src/styles/header.css";
-import logo from "/src/images/rspnsv-transp-lightbg-v3.webp";
 import Logo from "../components/logo";
 
 const Header = () => {
@@ -10,7 +9,9 @@ const Header = () => {
     /* Header Bar */
     <header class="main-bkg">
       <div class="header-wrapper">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <nav class="main-menu">
           <div class="darkmode">
             <ThemeToggler>
@@ -30,11 +31,11 @@ const Header = () => {
             </ThemeToggler>
           </div>
           <ul className="no-indent">
-            <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/services">Services</Link>
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/contact">Contact</Link>
+            <button>Get Started</button>
           </ul>
         </nav>
       </div>

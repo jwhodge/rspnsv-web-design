@@ -43,7 +43,7 @@ const IndexPage = () => {
         <ContentBox style="two-thirds left">
           <HPDesign />
           <div className="btn">
-            <button className="sec-btn">Learn About Site Types</button>
+            <button>Learn About Site Types</button>
           </div>
         </ContentBox>
       </ContentSection>

@@ -25,12 +25,10 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  justify-content: space-between;
   /* align-items: center; */
   position: relative;
-  width: 100%;
+  width: 80%;
   max-width: 1200px;
   min-width: 800px;
   max-height: 90%;
