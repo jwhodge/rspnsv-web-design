@@ -10,7 +10,7 @@
   --std-tri-btm: calc(var(--std-logo-height) * 0.7165);
 }
 
-h1 {
+.company-name {
   margin: 0;
 }
 
